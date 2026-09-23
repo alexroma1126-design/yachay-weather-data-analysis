@@ -6,54 +6,78 @@
     {
       "year": 1940,
       "passed": true,
-      "records": 8784
+      "records": 8784,
+      "metadata_consistent": true
     },
     {
       "year": 1941,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     },
     {
       "year": 1942,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     },
     {
       "year": 1943,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     },
     {
       "year": 1944,
       "passed": true,
-      "records": 8784
+      "records": 8784,
+      "metadata_consistent": true
     },
     {
       "year": 1945,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     },
     {
       "year": 1946,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     },
     {
       "year": 1947,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     },
     {
       "year": 1948,
       "passed": true,
-      "records": 8784
+      "records": 8784,
+      "metadata_consistent": true
     },
     {
       "year": 1949,
       "passed": true,
-      "records": 8760
+      "records": 8760,
+      "metadata_consistent": true
     }
   ],
-  "passed": true,
-  "failed_years": 0
+  "reference_metadata": {
+    "grid_latitude": 0.5,
+    "grid_longitude": -77.75,
+    "elevation": 2856.0,
+    "timezone": "America/Guayaquil",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  "metadata_inconsistencies": [],
+  "failed_years": 0,
+  "passed": true
 }
