@@ -1,0 +1,59 @@
+{
+  "source": "Open-Meteo ERA5",
+  "start_year": 1940,
+  "end_year": 1949,
+  "years": [
+    {
+      "year": 1940,
+      "passed": true,
+      "records": 8784
+    },
+    {
+      "year": 1941,
+      "passed": true,
+      "records": 8760
+    },
+    {
+      "year": 1942,
+      "passed": true,
+      "records": 8760
+    },
+    {
+      "year": 1943,
+      "passed": true,
+      "records": 8760
+    },
+    {
+      "year": 1944,
+      "passed": true,
+      "records": 8784
+    },
+    {
+      "year": 1945,
+      "passed": true,
+      "records": 8760
+    },
+    {
+      "year": 1946,
+      "passed": true,
+      "records": 8760
+    },
+    {
+      "year": 1947,
+      "passed": true,
+      "records": 8760
+    },
+    {
+      "year": 1948,
+      "passed": true,
+      "records": 8784
+    },
+    {
+      "year": 1949,
+      "passed": true,
+      "records": 8760
+    }
+  ],
+  "passed": true,
+  "failed_years": 0
+}
