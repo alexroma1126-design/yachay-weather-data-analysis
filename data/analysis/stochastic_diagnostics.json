@@ -1,0 +1,149 @@
+{
+  "source": "Open-Meteo ERA5",
+  "rows": 753888,
+  "temperature": {
+    "linear_trend_c_per_year": 0.0187444097258874,
+    "linear_trend_c_per_decade": 0.18744409725887398,
+    "raw_std": 3.078809700021153,
+    "residual_mean": -1.6889678340577108e-17,
+    "residual_std": 1.253610542710914,
+    "seasonal_component_min": -4.718904249996447,
+    "seasonal_component_max": 5.173929708666494
+  },
+  "autocorrelations": [
+    {
+      "lag_hours": 1,
+      "temperature_raw": 0.9345371409461711,
+      "temperature_residual": 0.8282557200806183
+    },
+    {
+      "lag_hours": 3,
+      "temperature_raw": 0.6607497917315489,
+      "temperature_residual": 0.5918873687210339
+    },
+    {
+      "lag_hours": 6,
+      "temperature_raw": 0.0821966725651211,
+      "temperature_residual": 0.36160522872675116
+    },
+    {
+      "lag_hours": 12,
+      "temperature_raw": -0.5453021414996244,
+      "temperature_residual": 0.15103548952637508
+    },
+    {
+      "lag_hours": 24,
+      "temperature_raw": 0.9212988527456148,
+      "temperature_residual": 0.5223640523042407
+    },
+    {
+      "lag_hours": 48,
+      "temperature_raw": 0.8975655289574767,
+      "temperature_residual": 0.3772178639889807
+    },
+    {
+      "lag_hours": 72,
+      "temperature_raw": 0.8868600657505363,
+      "temperature_residual": 0.3112718644004799
+    },
+    {
+      "lag_hours": 168,
+      "temperature_raw": 0.8768967166958062,
+      "temperature_residual": 0.2475466139313646
+    },
+    {
+      "lag_hours": 336,
+      "temperature_raw": 0.8680613173044796,
+      "temperature_residual": 0.20489693285893412
+    },
+    {
+      "lag_hours": 720,
+      "temperature_raw": 0.8506977579989633,
+      "temperature_residual": 0.188645582847592
+    }
+  ],
+  "rain_transitions": [
+    {
+      "threshold_label": "gt_0",
+      "threshold_mm": 0.0,
+      "operator": "gt",
+      "dry_to_dry_count": 337252,
+      "dry_to_rain_count": 41273,
+      "rain_to_dry_count": 41272,
+      "rain_to_rain_count": 334090,
+      "p_dry_to_dry": 0.8909636087444687,
+      "p_dry_to_rain": 0.10903639125553134,
+      "p_rain_to_dry": 0.10995252582840032,
+      "p_rain_to_rain": 0.8900474741715997,
+      "wet_fraction": 0.49790287151407103
+    },
+    {
+      "threshold_label": "ge_0_1",
+      "threshold_mm": 0.1,
+      "operator": "ge",
+      "dry_to_dry_count": 337252,
+      "dry_to_rain_count": 41273,
+      "rain_to_dry_count": 41272,
+      "rain_to_rain_count": 334090,
+      "p_dry_to_dry": 0.8909636087444687,
+      "p_dry_to_rain": 0.10903639125553134,
+      "p_rain_to_dry": 0.10995252582840032,
+      "p_rain_to_rain": 0.8900474741715997,
+      "wet_fraction": 0.49790287151407103
+    },
+    {
+      "threshold_label": "ge_0_5",
+      "threshold_mm": 0.5,
+      "operator": "ge",
+      "dry_to_dry_count": 605076,
+      "dry_to_rain_count": 31242,
+      "rain_to_dry_count": 31242,
+      "rain_to_rain_count": 86327,
+      "p_dry_to_dry": 0.9509019075367976,
+      "p_dry_to_rain": 0.04909809246320236,
+      "p_rain_to_dry": 0.26573331405387474,
+      "p_rain_to_rain": 0.7342666859461252,
+      "wet_fraction": 0.15595022072244152
+    },
+    {
+      "threshold_label": "ge_1_0",
+      "threshold_mm": 1.0,
+      "operator": "ge",
+      "dry_to_dry_count": 697682,
+      "dry_to_rain_count": 16158,
+      "rain_to_dry_count": 16158,
+      "rain_to_rain_count": 23889,
+      "p_dry_to_dry": 0.9773646755575479,
+      "p_dry_to_rain": 0.02263532444245209,
+      "p_rain_to_dry": 0.40347591579893627,
+      "p_rain_to_rain": 0.5965240842010637,
+      "wet_fraction": 0.05312062269196485
+    }
+  ],
+  "humidity_future_rain": [
+    {
+      "lead_hours": 0,
+      "correlation_humidity_future_rain": -0.18813279805548255
+    },
+    {
+      "lead_hours": 1,
+      "correlation_humidity_future_rain": -0.17296259957802074
+    },
+    {
+      "lead_hours": 3,
+      "correlation_humidity_future_rain": -0.046814659858231925
+    },
+    {
+      "lead_hours": 6,
+      "correlation_humidity_future_rain": 0.22371241719287924
+    },
+    {
+      "lead_hours": 12,
+      "correlation_humidity_future_rain": 0.41153169392752736
+    },
+    {
+      "lead_hours": 24,
+      "correlation_humidity_future_rain": -0.2767275449457029
+    }
+  ]
+}
