@@ -1,0 +1,39 @@
+{
+  "train_start": "1940-01-01 00:00:00",
+  "train_end": "2015-12-31 23:00:00",
+  "test_start": "2016-01-01 00:00:00",
+  "test_end": "2025-12-31 23:00:00",
+  "rain_threshold_mm": 0.1,
+  "baseline_probability": 0.4976524130312091,
+  "markov_order1": {
+    "p_rain_given_dry": 0.10882329212868758,
+    "p_rain_given_rain": 0.890150326955095
+  },
+  "metrics": [
+    {
+      "model": "baseline",
+      "brier": 0.2500045739613514,
+      "log_loss": 0.6931563285903679,
+      "accuracy": 0.5001996099052138
+    },
+    {
+      "model": "markov_order1",
+      "brier": 0.09843707421550181,
+      "log_loss": 0.3479587814144631,
+      "accuracy": 0.8893134559888675
+    },
+    {
+      "model": "markov_order2",
+      "brier": 0.09789272516577012,
+      "log_loss": 0.34551662815955847,
+      "accuracy": 0.8893134559888675
+    },
+    {
+      "model": "duration_model",
+      "brier": 0.09676082798280819,
+      "log_loss": 0.3392478747268283,
+      "accuracy": 0.8893134559888675
+    }
+  ],
+  "duration_model_brier_improvement_vs_order1": 0.017028606813566247
+}
