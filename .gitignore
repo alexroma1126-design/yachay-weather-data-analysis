@@ -11,3 +11,6 @@ __pycache__/
 
 # Datos meteorologicos originales
 data/raw/*.json
+
+# Dataset maestro reproducible
+data/processed/era5_master_*.csv
