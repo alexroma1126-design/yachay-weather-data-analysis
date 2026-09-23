@@ -1,0 +1,23 @@
+{
+  "year": 2025,
+  "source": "Open-Meteo ERA5",
+  "requested_latitude": 0.59354,
+  "requested_longitude": -77.83066,
+  "grid_latitude": 0.5,
+  "grid_longitude": -77.75,
+  "expected_records": 8760,
+  "received_records": 8760,
+  "duplicate_timestamps": 0,
+  "continuous_timeline": true,
+  "variable_lengths": {
+    "temperature_2m": 8760,
+    "relative_humidity_2m": 8760,
+    "precipitation": 8760
+  },
+  "missing_values": {
+    "temperature_2m": 0,
+    "relative_humidity_2m": 0,
+    "precipitation": 0
+  },
+  "passed": true
+}

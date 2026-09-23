@@ -1,0 +1,13 @@
+﻿# Entorno virtual
+.venv/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Variables de entorno privadas
+.env
+
+# Datos meteorologicos originales
+data/raw/*.json
