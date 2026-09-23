@@ -1,0 +1,78 @@
+{
+  "rows": 753888,
+  "columns_original": 4,
+  "first_timestamp": "1940-01-01T00:00:00",
+  "last_timestamp": "2025-12-31T23:00:00",
+  "duplicate_timestamps": 0,
+  "missing_values": {
+    "timestamp": 0,
+    "temperature_2m": 0,
+    "relative_humidity_2m": 0,
+    "precipitation": 0,
+    "year": 0,
+    "month": 0,
+    "hour": 0,
+    "decade": 0,
+    "rain_hour": 0
+  },
+  "temperature_2m": {
+    "mean": 11.29765336495607,
+    "std": 3.078809700021153,
+    "min": 1.2,
+    "p01": 5.7,
+    "p05": 6.9,
+    "median": 10.8,
+    "p95": 16.8,
+    "p99": 18.5,
+    "max": 22.9
+  },
+  "relative_humidity_2m": {
+    "mean": 85.81204900462669,
+    "std": 13.372996419326594,
+    "min": 12.0,
+    "median": 91.0,
+    "max": 100.0
+  },
+  "precipitation": {
+    "mean_hourly": 0.2200367959166348,
+    "median_hourly": 0.0,
+    "max_hourly": 7.9,
+    "total_mm": 165883.09999999998,
+    "rain_hours": 375363,
+    "rain_hour_fraction": 0.49790287151407103
+  },
+  "autocorrelation": {
+    "temperature_lag_1h": 0.9345371409461711,
+    "temperature_lag_24h": 0.9212988527456148,
+    "temperature_lag_168h": 0.8768967166958062
+  },
+  "correlations": {
+    "temperature_2m": {
+      "temperature_2m": 1.0,
+      "relative_humidity_2m": -0.8267331180309493,
+      "precipitation": 0.2400757977110324
+    },
+    "relative_humidity_2m": {
+      "temperature_2m": -0.8267331180309493,
+      "relative_humidity_2m": 1.0,
+      "precipitation": -0.014429534648846082
+    },
+    "precipitation": {
+      "temperature_2m": 0.2400757977110324,
+      "relative_humidity_2m": -0.014429534648846082,
+      "precipitation": 1.0
+    }
+  },
+  "annual_temperature": {
+    "coldest_mean_year": 1943,
+    "coldest_mean_temperature": 10.08546803652968,
+    "warmest_mean_year": 2016,
+    "warmest_mean_temperature": 12.550512295081967
+  },
+  "annual_precipitation": {
+    "driest_year": 1983,
+    "driest_total_mm": 1406.5,
+    "wettest_year": 2025,
+    "wettest_total_mm": 2730.3
+  }
+}
