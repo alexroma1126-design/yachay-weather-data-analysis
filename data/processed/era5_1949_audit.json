@@ -1,10 +1,23 @@
 {
   "year": 1949,
   "source": "Open-Meteo ERA5",
+  "api_endpoint": "https://archive-api.open-meteo.com/v1/archive",
   "requested_latitude": 0.59354,
   "requested_longitude": -77.83066,
   "grid_latitude": 0.5,
   "grid_longitude": -77.75,
+  "elevation": 2856.0,
+  "timezone": "America/Guayaquil",
+  "timezone_abbreviation": "GMT-5",
+  "utc_offset_seconds": -18000,
+  "hourly_units": {
+    "time": "iso8601",
+    "temperature_2m": "°C",
+    "relative_humidity_2m": "%",
+    "precipitation": "mm"
+  },
+  "units_match": true,
+  "timezone_match": true,
   "expected_records": 8760,
   "received_records": 8760,
   "duplicate_timestamps": 0,

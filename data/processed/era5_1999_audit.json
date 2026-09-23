@@ -1,5 +1,5 @@
 {
-  "year": 1941,
+  "year": 1999,
   "source": "Open-Meteo ERA5",
   "api_endpoint": "https://archive-api.open-meteo.com/v1/archive",
   "requested_latitude": 0.59354,

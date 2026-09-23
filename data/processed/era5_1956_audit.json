@@ -1,5 +1,5 @@
 {
-  "year": 1941,
+  "year": 1956,
   "source": "Open-Meteo ERA5",
   "api_endpoint": "https://archive-api.open-meteo.com/v1/archive",
   "requested_latitude": 0.59354,
@@ -18,14 +18,14 @@
   },
   "units_match": true,
   "timezone_match": true,
-  "expected_records": 8760,
-  "received_records": 8760,
+  "expected_records": 8784,
+  "received_records": 8784,
   "duplicate_timestamps": 0,
   "continuous_timeline": true,
   "variable_lengths": {
-    "temperature_2m": 8760,
-    "relative_humidity_2m": 8760,
-    "precipitation": 8760
+    "temperature_2m": 8784,
+    "relative_humidity_2m": 8784,
+    "precipitation": 8784
   },
   "missing_values": {
     "temperature_2m": 0,

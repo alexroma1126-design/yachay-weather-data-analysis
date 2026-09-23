@@ -1,0 +1,539 @@
+{
+  "source": "Open-Meteo ERA5",
+  "start_year": 1940,
+  "end_year": 2025,
+  "years": [
+    {
+      "year": 1940,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1941,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1942,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1943,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1944,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1945,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1946,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1947,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1948,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1949,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1950,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1951,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1952,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1953,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1954,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1955,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1956,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1957,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1958,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1959,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1960,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1961,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1962,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1963,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1964,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1965,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1966,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1967,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1968,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1969,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1970,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1971,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1972,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1973,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1974,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1975,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1976,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1977,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1978,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1979,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1980,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1981,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1982,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1983,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1984,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1985,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1986,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1987,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1988,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1989,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1990,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1991,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1992,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1993,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1994,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1995,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1996,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1997,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1998,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 1999,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2000,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2001,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2002,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2003,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2004,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2005,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2006,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2007,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2008,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2009,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2010,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2011,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2012,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2013,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2014,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2015,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2016,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2017,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2018,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2019,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2020,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2021,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2022,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2023,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2024,
+      "passed": true,
+      "records": 8784,
+      "metadata_consistent": true
+    },
+    {
+      "year": 2025,
+      "passed": true,
+      "records": 8760,
+      "metadata_consistent": true
+    }
+  ],
+  "reference_metadata": {
+    "grid_latitude": 0.5,
+    "grid_longitude": -77.75,
+    "elevation": 2856.0,
+    "timezone": "America/Guayaquil",
+    "utc_offset_seconds": -18000,
+    "hourly_units": {
+      "time": "iso8601",
+      "temperature_2m": "°C",
+      "relative_humidity_2m": "%",
+      "precipitation": "mm"
+    }
+  },
+  "metadata_inconsistencies": [],
+  "failed_years": 0,
+  "passed": true
+}
