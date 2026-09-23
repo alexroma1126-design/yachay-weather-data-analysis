@@ -1,0 +1,301 @@
+{
+  "split_date": "2016-01-01 00:00:00",
+  "temperature": {
+    "training_trend_c_per_decade": 0.16904053705767885,
+    "horizons": {
+      "1": {
+        "persistence": {
+          "mae": 0.7507784786303339,
+          "rmse": 1.0732503415244494,
+          "r2": 0.8768221975266826
+        },
+        "daily_naive": {
+          "mae": 1.0167649507819003,
+          "rmse": 1.3427331553733945,
+          "r2": 0.8071987670418802
+        },
+        "deterministic": {
+          "mae": 1.0585761773712656,
+          "rmse": 1.348637618895319,
+          "r2": 0.8054994110893277
+        },
+        "direct_ar": {
+          "mae": 0.49248654294865357,
+          "rmse": 0.665293021109067,
+          "r2": 0.9526678407900773
+        }
+      },
+      "3": {
+        "persistence": {
+          "mae": 1.9412414878691444,
+          "rmse": 2.5009708274793643,
+          "r2": 0.33112904064871385
+        },
+        "daily_naive": {
+          "mae": 1.0167721771663871,
+          "rmse": 1.34274354416368,
+          "r2": 0.8071981332539961
+        },
+        "deterministic": {
+          "mae": 1.0585878706203853,
+          "rmse": 1.348650381669641,
+          "r2": 0.8054981001422619
+        },
+        "direct_ar": {
+          "mae": 0.7631933986768549,
+          "rmse": 1.0068423778173237,
+          "r2": 0.8915953125037087
+        }
+      },
+      "6": {
+        "persistence": {
+          "mae": 3.4451976821116506,
+          "rmse": 4.148731059807499,
+          "r2": -0.8405682602944344
+        },
+        "daily_naive": {
+          "mae": 1.016777313895923,
+          "rmse": 1.342755560122355,
+          "r2": 0.8071963364534214
+        },
+        "deterministic": {
+          "mae": 1.0586077323400747,
+          "rmse": 1.3486701196522914,
+          "r2": 0.8054940754025798
+        },
+        "direct_ar": {
+          "mae": 0.9131955091958153,
+          "rmse": 1.1907505984070872,
+          "r2": 0.8483777350271615
+        }
+      },
+      "12": {
+        "persistence": {
+          "mae": 4.773332192562172,
+          "rmse": 5.413485192149482,
+          "r2": -2.133713650377535
+        },
+        "daily_naive": {
+          "mae": 1.0168115446041526,
+          "rmse": 1.3427923799940258,
+          "r2": 0.8071928481832318
+        },
+        "deterministic": {
+          "mae": 1.0586381122909747,
+          "rmse": 1.3487051195004538,
+          "r2": 0.8054911280787629
+        },
+        "direct_ar": {
+          "mae": 0.9139865520919824,
+          "rmse": 1.183339263026048,
+          "r2": 0.8502647844140748
+        }
+      },
+      "24": {
+        "persistence": {
+          "mae": 1.016818410003651,
+          "rmse": 1.3428094458718256,
+          "r2": 0.807179897690296
+        },
+        "daily_naive": {
+          "mae": 1.016818410003651,
+          "rmse": 1.3428094458718256,
+          "r2": 0.807179897690296
+        },
+        "deterministic": {
+          "mae": 1.0585990522339292,
+          "rmse": 1.348685428964697,
+          "r2": 0.8054886873377485
+        },
+        "direct_ar": {
+          "mae": 0.8809600891523697,
+          "rmse": 1.1480245377998826,
+          "r2": 0.859062723366339
+        }
+      }
+    }
+  },
+  "rain": {
+    "threshold_mm": 0.1,
+    "training_stay_probability": {
+      "dry": 0.8911767078713124,
+      "rain": 0.890150326955095
+    },
+    "spell_summaries": [
+      {
+        "dataset": "train",
+        "state": "dry",
+        "episodes": 36421,
+        "empirical_mean_hours": 9.188984377145054,
+        "empirical_median_hours": 6.0,
+        "empirical_p90_hours": 18.0,
+        "empirical_p95_hours": 21.0,
+        "empirical_max_hours": 309,
+        "markov_stay_probability": 0.8911767078713124,
+        "geometric_mean_hours": 9.189209225700164,
+        "geometric_median_hours": 7,
+        "geometric_p90_hours": 20,
+        "geometric_p95_hours": 27
+      },
+      {
+        "dataset": "test",
+        "state": "dry",
+        "episodes": 4852,
+        "empirical_mean_hours": 9.038128606760099,
+        "empirical_median_hours": 6.0,
+        "empirical_p90_hours": 18.0,
+        "empirical_p95_hours": 21.0,
+        "empirical_max_hours": 135,
+        "markov_stay_probability": 0.8911767078713124,
+        "geometric_mean_hours": 9.189209225700164,
+        "geometric_median_hours": 7,
+        "geometric_p90_hours": 20,
+        "geometric_p95_hours": 27
+      },
+      {
+        "dataset": "train",
+        "state": "rain",
+        "episodes": 36420,
+        "empirical_mean_hours": 9.103349807797914,
+        "empirical_median_hours": 7.0,
+        "empirical_p90_hours": 19.0,
+        "empirical_p95_hours": 29.0,
+        "empirical_max_hours": 163,
+        "markov_stay_probability": 0.890150326955095,
+        "geometric_mean_hours": 9.103349807797917,
+        "geometric_median_hours": 6,
+        "geometric_p90_hours": 20,
+        "geometric_p95_hours": 26
+      },
+      {
+        "dataset": "test",
+        "state": "rain",
+        "episodes": 4853,
+        "empirical_mean_hours": 9.029260251390893,
+        "empirical_median_hours": 7.0,
+        "empirical_p90_hours": 18.0,
+        "empirical_p95_hours": 26.0,
+        "empirical_max_hours": 154,
+        "markov_stay_probability": 0.890150326955095,
+        "geometric_mean_hours": 9.103349807797917,
+        "geometric_median_hours": 6,
+        "geometric_p90_hours": 20,
+        "geometric_p95_hours": 26
+      }
+    ],
+    "continuation": [
+      {
+        "state": "dry",
+        "duration_hours": 1,
+        "episodes_surviving": 4852,
+        "empirical_continue_probability": 0.8171887881286067,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": -0.07398791974270569
+      },
+      {
+        "state": "dry",
+        "duration_hours": 2,
+        "episodes_surviving": 3965,
+        "empirical_continue_probability": 0.8736443883984868,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": -0.01753231947282563
+      },
+      {
+        "state": "dry",
+        "duration_hours": 3,
+        "episodes_surviving": 3464,
+        "empirical_continue_probability": 0.9018475750577367,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": 0.010670867186424293
+      },
+      {
+        "state": "dry",
+        "duration_hours": 6,
+        "episodes_surviving": 2538,
+        "empirical_continue_probability": 0.9121355397951143,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": 0.02095883192380188
+      },
+      {
+        "state": "dry",
+        "duration_hours": 12,
+        "episodes_surviving": 1531,
+        "empirical_continue_probability": 0.9359895493141738,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": 0.04481284144286135
+      },
+      {
+        "state": "dry",
+        "duration_hours": 24,
+        "episodes_surviving": 159,
+        "empirical_continue_probability": 0.9119496855345912,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": 0.02077297766327879
+      },
+      {
+        "state": "dry",
+        "duration_hours": 48,
+        "episodes_surviving": 50,
+        "empirical_continue_probability": 0.96,
+        "markov_expected_probability": 0.8911767078713124,
+        "difference": 0.06882329212868754
+      },
+      {
+        "state": "rain",
+        "duration_hours": 1,
+        "episodes_surviving": 4853,
+        "empirical_continue_probability": 0.8291778281475376,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": -0.060972498807557396
+      },
+      {
+        "state": "rain",
+        "duration_hours": 2,
+        "episodes_surviving": 4024,
+        "empirical_continue_probability": 0.8918986083499006,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": 0.0017482813948056508
+      },
+      {
+        "state": "rain",
+        "duration_hours": 3,
+        "episodes_surviving": 3589,
+        "empirical_continue_probability": 0.9086096405684034,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": 0.018459313613308437
+      },
+      {
+        "state": "rain",
+        "duration_hours": 6,
+        "episodes_surviving": 2773,
+        "empirical_continue_probability": 0.9138117562206997,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": 0.02366142926560466
+      },
+      {
+        "state": "rain",
+        "duration_hours": 12,
+        "episodes_surviving": 1061,
+        "empirical_continue_probability": 0.8906691800188501,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": 0.0005188530637550981
+      },
+      {
+        "state": "rain",
+        "duration_hours": 24,
+        "episodes_surviving": 280,
+        "empirical_continue_probability": 0.95,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": 0.05984967304490496
+      },
+      {
+        "state": "rain",
+        "duration_hours": 48,
+        "episodes_surviving": 65,
+        "empirical_continue_probability": 0.9076923076923077,
+        "markov_expected_probability": 0.890150326955095,
+        "difference": 0.017541980737212692
+      }
+    ]
+  }
+}

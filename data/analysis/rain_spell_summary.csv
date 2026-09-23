@@ -1,0 +1,5 @@
+dataset,state,episodes,empirical_mean_hours,empirical_median_hours,empirical_p90_hours,empirical_p95_hours,empirical_max_hours,markov_stay_probability,geometric_mean_hours,geometric_median_hours,geometric_p90_hours,geometric_p95_hours
+train,dry,36421,9.188984377145054,6.0,18.0,21.0,309,0.8911767078713124,9.189209225700164,7,20,27
+test,dry,4852,9.038128606760099,6.0,18.0,21.0,135,0.8911767078713124,9.189209225700164,7,20,27
+train,rain,36420,9.103349807797914,7.0,19.0,29.0,163,0.890150326955095,9.103349807797917,6,20,26
+test,rain,4853,9.029260251390893,7.0,18.0,26.0,154,0.890150326955095,9.103349807797917,6,20,26
