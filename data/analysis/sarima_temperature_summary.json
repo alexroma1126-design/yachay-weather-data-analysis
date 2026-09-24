@@ -1,0 +1,51 @@
+{
+  "dataset": "data\\processed\\era5_master_1940_2025.csv",
+  "target": "temperature_2m",
+  "train_start": "1940-01-01 00:00:00",
+  "train_end": "2015-12-31 23:00:00",
+  "test_start": "2016-01-01 00:00:00",
+  "test_end": "2025-12-31 23:00:00",
+  "sarima": {
+    "order": [
+      2,
+      0,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      1,
+      24
+    ],
+    "fit_years": 5,
+    "fit_observations": 43824,
+    "aic": 94443.75148563155,
+    "bic": 94495.87554623088,
+    "interpretation": "SARIMA is applied to residual temperature after removing linear trend and month-hour climatology."
+  },
+  "deterministic_component": {
+    "trend_slope_per_hour": 1.9284052953138264e-06,
+    "trend_intercept": 10.539514834715954,
+    "climatology": "month-hour"
+  },
+  "metrics": [
+    {
+      "model": "persistence",
+      "mae": 0.7507744775983209,
+      "rmse": 1.0732450708977916,
+      "r2": 0.8768223303159492
+    },
+    {
+      "model": "deterministic",
+      "mae": 1.0585730069864634,
+      "rmse": 1.3486325043924432,
+      "r2": 0.8054991856460327
+    },
+    {
+      "model": "sarima",
+      "mae": 0.4581468509718877,
+      "rmse": 0.6229195445763829,
+      "r2": 0.9585047779067317
+    }
+  ]
+}
