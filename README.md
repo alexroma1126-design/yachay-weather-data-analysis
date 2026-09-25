@@ -127,6 +127,41 @@ A una hora, el modelo autoregresivo redujo de forma clara el error respecto a la
 
 ---
 
+
+### Extensión: SARIMA a un paso adelante
+
+Como extensión del análisis principal por horizontes, se comparó el modelo
+autoregresivo con un modelo estacional:
+
+**SARIMA(2,0,1)(1,0,1,24)**.
+
+El período estacional de 24 observaciones representa el ciclo diario de una
+serie horaria.
+
+La tendencia y la climatología mes-hora fueron tratadas previamente, por lo
+que en esta configuración se utilizaron `d = 0` y `D = 0`.
+
+La comparación a una hora fue:
+
+| Modelo | MAE | RMSE | R² |
+|---|---:|---:|---:|
+| AR | 0.4925 °C | 0.6653 °C | 0.9527 |
+| SARIMA | **0.4581 °C** | **0.6229 °C** | **0.9585** |
+
+Respecto al AR, SARIMA redujo aproximadamente **6.98 % el MAE** y
+**6.37 % el RMSE**.
+
+La evaluación es **a un paso adelante**: para predecir cada hora se utiliza
+la información observada disponible hasta la hora anterior. Estos resultados
+no representan un pronóstico recursivo libre de diez años.
+
+La mejora observada muestra que el modelo estacional puede aprovechar
+estructura temporal adicional presente en los residuos.
+
+![Predicción SARIMA durante una semana](figures/sarima_temperature_week.png)
+
+---
+
 ## 4. Persistencia de estados secos y lluviosos
 
 El menor valor positivo de precipitación encontrado en el dataset fue:
@@ -378,260 +413,6 @@ Una cadena de Markov de primer orden captura gran parte de esta dinámica, mient
 
 En conjunto, el proyecto muestra que una API meteorológica puede utilizarse no solo para obtener y visualizar datos, sino también para estudiar tendencias, estacionalidad, dependencia temporal, predictibilidad y procesos estocásticos de manera reproducible.
 
-<!-- EXPOSICION_START -->
-
-# Guion para la exposición
-
-## 1. Pregunta central
-
-Este proyecto analiza una serie climática horaria ERA5 para una celda
-representativa de San Gabriel durante **1940-2025**.
-
-Se dispone de **753 888 observaciones horarias**.
-
-Las variables principales son:
-
-- temperatura a 2 metros;
-- humedad relativa;
-- precipitación.
-
-La pregunta central es:
-
-> ¿Qué patrones y qué memoria temporal existen en las variables
-> climáticas y cuánto ayudan a predecir su comportamiento futuro?
-
----
-
-## 2. División temporal
-
-La evaluación respeta estrictamente el orden temporal:
-
-- **Entrenamiento:** 1940-2015.
-- **Prueba:** 2016-2025.
-
-Así se evita utilizar información futura durante el entrenamiento.
-
-La evaluación predictiva de AR y SARIMA se realiza a **un paso adelante**:
-para predecir cada hora se permite utilizar la historia observada hasta la
-hora inmediatamente anterior. Por tanto, los resultados representan
-predicción horaria condicionada a información pasada disponible y no un
-pronóstico recursivo libre de diez años.
-
----
-
-## 3. Temperatura
-
-La temperatura se estudia mediante la idea:
-
-```text
-TEMPERATURA
-    |
-    +--- tendencia
-    |
-    +--- climatología mes-hora
-    |
-    +--- residuo
-            |
-            +--- dependencia temporal
-```
-
-Primero se retiran la tendencia y la climatología mes-hora.
-
-Después se modela la memoria que permanece en los residuos.
-
-Los modelos se comparan progresivamente:
-
-```text
-Persistencia
-     |
-     v
-Determinista
-     |
-     v
-AR
-     |
-     v
-SARIMA
-```
-
----
-
-## 4. Modelo SARIMA
-
-El nuevo modelo es:
-
-```text
-SARIMA(2,0,1) x (1,0,1,24)
-```
-
-El periodo estacional **24** representa el ciclo diario de una
-serie horaria.
-
-SARIMA se aplica sobre los residuos después de retirar previamente
-la tendencia y la climatología mes-hora.
-
-Por eso utilizamos:
-
-```text
-d = 0
-D = 0
-```
-
-La pregunta es si todavía queda una dependencia periódica que el
-modelo AR no capture completamente.
-
----
-
-## 5. Resultados
-
-Evaluación sobre el periodo **2016-2025**:
-
-| Modelo | MAE | RMSE | R² |
-|---|---:|---:|---:|
-| Persistencia | 0.7508 | 1.0732 | 0.8768 |
-| Determinista | 1.0586 | 1.3486 | 0.8055 |
-| AR | 0.4925 | 0.6653 | 0.9527 |
-| **SARIMA** | **0.4581** | **0.6229** | **0.9585** |
-
-Para SARIMA:
-
-```text
-MAE  = 0.4581 °C
-RMSE = 0.6229 °C
-R²   = 0.9585
-```
-
-Frente al AR:
-
-```text
-reducción MAE  = 6.98 %
-reducción RMSE = 6.37 %
-```
-
-El AR ya explica una gran parte de la dependencia temporal.
-
-SARIMA consigue una mejora adicional al representar explícitamente
-estructura periódica residual asociada al ciclo de 24 horas.
-
-Por tanto:
-
-> **La mayor parte de la memoria de corto plazo puede modelarse con AR,
-> pero existe información temporal adicional que SARIMA puede aprovechar.**
-
----
-
-## 6. Precipitación
-
-La precipitación se estudia como un sistema discreto:
-
-```text
-SECO <------> LLUVIA
-```
-
-La complejidad aumenta progresivamente:
-
-```text
-Probabilidad global
-        |
-        v
-Markov orden 1
-        |
-        v
-Markov orden 2
-        |
-        v
-Duración del episodio
-```
-
-La pregunta es si la probabilidad futura de lluvia depende únicamente
-del estado actual o también de la historia reciente.
-
----
-
-## 7. La conexión entre SARIMA y Markov
-
-Aunque los modelos son diferentes, todos estudian **memoria temporal**:
-
-```text
-                 MEMORIA TEMPORAL
-                       |
-            +----------+----------+
-            |                     |
-            v                     v
-       TEMPERATURA           PRECIPITACIÓN
-            |                     |
-            v                     v
-    variable continua       estados discretos
-            |                     |
-            v                     v
-       AR / SARIMA              MARKOV
-```
-
-AR y SARIMA modelan dependencia temporal sobre una variable continua.
-
-Markov modela dependencia temporal sobre estados discretos.
-
----
-
-## 8. Idea central del trabajo
-
-```text
-DATOS
-  |
-  v
-PATRONES
-  |
-  v
-TENDENCIA Y ESTACIONALIDAD
-  |
-  v
-DEPENDENCIA TEMPORAL
-  |
-  v
-MEMORIA
-  |
-  v
-PREDICCIÓN
-```
-
-El objetivo no fue escoger automáticamente el modelo más complejo.
-
-La estrategia fue aumentar progresivamente la complejidad y comprobar
-si cada nuevo componente aporta información predictiva.
-
----
-
-## 9. Mensaje final para la exposición
-
-Para temperatura:
-
-```text
-Determinista -> AR -> SARIMA
-```
-
-Para precipitación:
-
-```text
-Probabilidad -> Markov 1 -> Markov 2 -> Duración
-```
-
-La idea que conecta todo el proyecto es:
-
-> **Los patrones describen el comportamiento climático; la memoria
-> temporal permite convertir esos patrones en información predictiva.**
-
----
-
-## 10. Reproducción desde VS Code
-
-Desde la raíz del proyecto:
-
-```powershell
-.\\.venv\\Scripts\\python.exe src\compare_models.py
-.\\.venv\\Scripts\\python.exe src\horizon_duration_diagnostics.py
-.\\.venv\\Scripts\\python.exe src\compare_rain_state_models.py
-.\\.venv\\Scripts\\python.exe src\compare_sarima.py
-.\\.venv\\Scripts\\python.exe src\generate_figures.py
-```
-
-<!-- EXPOSICION_END -->
+Como extensión del análisis predictivo a una hora, SARIMA obtuvo un MAE de
+0.4581 °C, un RMSE de 0.6229 °C y un R² de 0.9585, mejorando moderadamente
+al modelo autoregresivo bajo evaluación a un paso adelante.
