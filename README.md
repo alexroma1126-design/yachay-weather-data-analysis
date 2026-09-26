@@ -1,4 +1,4 @@
-﻿# Tarea 01 — Análisis meteorológico de San Gabriel con Open-Meteo
+# Tarea 01 — Análisis meteorológico de San Gabriel con Open-Meteo
 
 ## Maestría en Ciencia de Datos — Universidad Yachay Tech
 
@@ -52,9 +52,9 @@ ERA5 es un producto de reanálisis meteorológico. Por tanto, los valores no deb
 
 ---
 
-# Resultados principales
+## Resultados principales
 
-## 1. Evolución histórica de la temperatura
+### 1. Evolución histórica de la temperatura
 
 La temperatura media de toda la serie fue aproximadamente:
 
@@ -74,7 +74,7 @@ La tendencia representa una descripción estadística de la serie ERA5 analizada
 
 ---
 
-## 2. Climatología horaria
+### 2. Climatología horaria
 
 La temperatura presenta una estructura periódica marcada asociada con la hora del día y el mes del año.
 
@@ -93,7 +93,7 @@ Por ejemplo:
 
 ---
 
-## 3. Predicción de temperatura
+### 3. Predicción de temperatura
 
 Se utilizó una división cronológica para evitar fuga de información:
 
@@ -162,7 +162,7 @@ estructura temporal adicional presente en los residuos.
 
 ---
 
-## 4. Persistencia de estados secos y lluviosos
+### 4. Persistencia de estados secos y lluviosos
 
 El menor valor positivo de precipitación encontrado en el dataset fue:
 
@@ -187,7 +187,7 @@ Una hora lluviosa contiene mucha más información sobre la hora siguiente que u
 
 ---
 
-## 5. ¿Es suficiente un modelo de Markov de primer orden?
+### 5. ¿Es suficiente un modelo de Markov de primer orden?
 
 También se investigó si la duración acumulada del estado actual aporta información adicional.
 
@@ -208,7 +208,7 @@ La mejora indica que la duración del episodio contiene información adicional, 
 
 ---
 
-# Metodología
+## Metodología
 
 La secuencia general del proyecto fue:
 
@@ -242,7 +242,7 @@ Las preguntas de investigación se encuentran en:
 
 ---
 
-# Auditoría de los datos
+## Auditoría de los datos
 
 Se verificaron automáticamente los 86 años de información.
 
@@ -267,7 +267,7 @@ La huella SHA-256 del dataset maestro es:
 
 ---
 
-# Estructura del repositorio
+## Estructura del repositorio
 
 ```text
 Tarea 1/
@@ -294,6 +294,7 @@ Tarea 1/
 │   ├── profile_dataset.py
 │   ├── stochastic_diagnostics.py
 │   ├── compare_models.py
+│   ├── compare_sarima.py
 │   ├── horizon_duration_diagnostics.py
 │   ├── compare_rain_state_models.py
 │   └── generate_figures.py
@@ -304,7 +305,23 @@ Tarea 1/
 
 ---
 
-# Instalación
+### Función de los scripts
+
+| Script | Función principal |
+|---|---|
+| `audit_archive.py` | consulta y audita los archivos ERA5 anuales: fechas, unidades, continuidad y valores |
+| `build_master_dataset.py` | integra los 86 años, valida continuidad horaria y genera el dataset maestro con SHA-256 |
+| `profile_dataset.py` | realiza el perfil exploratorio y los resúmenes temporales del conjunto |
+| `stochastic_diagnostics.py` | estudia autocorrelación de temperatura y transiciones seco/lluvia |
+| `compare_models.py` | compara baselines y modelo AR para distintos horizontes de predicción |
+| `compare_sarima.py` | compara AR y SARIMA a un paso adelante sobre los residuos de temperatura |
+| `horizon_duration_diagnostics.py` | analiza el deterioro con el horizonte y el efecto de la duración de los estados de lluvia |
+| `compare_rain_state_models.py` | compara modelos sin memoria, Markov 1, Markov 2 y dependiente de duración |
+| `generate_figures.py` | genera las figuras finales utilizadas en el análisis |
+
+---
+
+## Instalación
 
 El proyecto fue desarrollado utilizando Python 3.13.
 
@@ -324,7 +341,7 @@ Las principales dependencias son NumPy, Pandas y Matplotlib.
 
 ---
 
-# Reproducción del análisis
+## Reproducción del análisis
 
 Descargar y auditar ERA5:
 
@@ -376,7 +393,7 @@ Generar las cinco figuras finales:
 
 ---
 
-# Decisiones metodológicas
+## Decisiones metodológicas
 
 El proyecto priorizó reproducibilidad, integridad de los datos, separación temporal entre entrenamiento y prueba, interpretabilidad y comparación contra modelos simples.
 
@@ -386,7 +403,7 @@ Los resultados mostraron que modelos autoregresivos y estocásticos relativament
 
 ---
 
-# Limitaciones
+## Limitaciones
 
 Los principales límites del análisis son:
 
@@ -399,7 +416,7 @@ Los principales límites del análisis son:
 
 ---
 
-# Conclusiones
+## Conclusiones
 
 El análisis de 86 años de información ERA5 permitió identificar estructuras temporales claras en temperatura y precipitación.
 
